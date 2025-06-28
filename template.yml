@@ -6,12 +6,12 @@ Resources:
       Role: !GetAtt GlueServiceRole.Arn
       Command:
         Name: glueetl
-        ScriptLocation: s3://emp-data-spark-glue-job/script/glue_script.py
+        ScriptLocation: s3://emp-data-spark-glue-job/script//emp_glue_script.py
       DefaultArguments:
         "--TempDir": "s3://emp-data-spark-glue-job/temp/"
       GlueVersion: "2.0"
       WorkerType: G.1X
-      NumberOfWorkers: 3
+      NumberOfWorkers: 2
 
 
   GlueServiceRole:
