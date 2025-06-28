@@ -8,10 +8,10 @@ Resources:
         Name: glueetl
         ScriptLocation: s3://dny-codepipelinebucket/script//glue_script.py
       DefaultArguments:
-        "--TempDir": "s3://emp-data-spark-glue-job/temp/"
+        "--TempDir": "s3://dny-codepipelinebucket/temp/"
       GlueVersion: "2.0"
       WorkerType: G.1X
-      NumberOfWorkers: 3
+      NumberOfWorkers: 2
 
 
   GlueServiceRole:
